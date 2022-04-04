@@ -23,7 +23,7 @@ namespace Basket.API.Entities
 
                 foreach (var item in Items)
                 {
-                    totalprice += item.Price * item.Price;
+                    totalprice += item.Price * item.Quantity;
                 }
                 return totalprice;
                     
