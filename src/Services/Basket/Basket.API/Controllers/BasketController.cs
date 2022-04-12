@@ -33,6 +33,9 @@ namespace Basket.API.Controllers
         [ProducesResponseType(typeof(ShoppingCart),(int)HttpStatusCode.OK)]
         public async Task<ActionResult<ShoppingCart>> UpdateBasket([FromBody]ShoppingCart shoppingCart)
         {
+            // TODO : comunicate with discount.GRPC
+            // and calculate latest prices of product into shopping cart
+
             return Ok(await _basketRepository.UpdateBasket(shoppingCart));
         }
 
